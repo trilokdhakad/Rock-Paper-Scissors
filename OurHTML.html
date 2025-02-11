@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+  <title>HTML CSS Review</title>
+  <link rel="stylesheet" href="OurCSS.css">
+</head>
+
+
+<body>
+  <button title="Good job!" class="hello-button" onclick="changeStyle(this)">
+    Hello
+  </button><br><br>
+
+  <button onclick="console.log(`Cart Quantity : ${cartQuantity}`)">
+    Show Qunatity
+  </button>
+
+  <button onclick="
+      cartQuantity += 3">
+    +3
+  </button>
+
+  <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset');
+      console.log(`Cart Quantity : ${cartQuantity}`)"
+      class = "reset-score-button">
+    Reset Cart
+  </button> <br><br>
+
+
+
+  <!-- A simple game -->
+  <p class="rpg-title">Rock Paper Scissors</p>
+
+  <button class="move-rps-button js-rock-button">
+    <img src="RPSimages/rock-emoji.png" class="move-rps-icon"></button>
+
+  <button class="move-rps-button js-paper-button"><img src="RPSimages/paper-emoji.png" class="move-rps-icon"></button>
+
+  <button class="move-rps-button js-scissors-button"><img src="RPSimages/scissors-emoji.png" class="move-rps-icon"></button>
+  
+  <p class="rps-result result"></p> <!-- Displays player's move, computer move, and result -->
+
+  <p class="rps-score score"></p> <!-- Displays current score -->
+
+
+  <button class="reset-button" onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    resetScore();
+  ">Reset Score</button>
+
+
+  <button class="auto-play-button" onclick="autoPlay();">Auto Play</button>
+
+
+
+
+
+  <!-- // script can be used to write js -->
+ <script src="OurJS.js"></script>
+</body>
+
+</html>
